@@ -3,7 +3,6 @@
 if [ $(id -u)!=0 ]
    echo "please run this script with root user access"
    exit 1
-
 fi
 
 dnf install nginx -y
