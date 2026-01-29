@@ -1,6 +1,9 @@
 #!/bin/bash
 
-for i in {1..100}
+Logs_file="/var/log/shell-script/$0.log"
+
+for package_name in $@
 do
-   echo "$i"
+   dnh install $package_name -y &>>$Logs_file
+   validate $? "$package_name"
 done
