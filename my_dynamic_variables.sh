@@ -6,4 +6,4 @@ echo "enter your email id:"
 read EMAIL_ID
 
 echo "your name is: $USER_NAME"
-echo "Your emai id is:$EMAI_ID "
+echo "Your emai id is:$EMAIL_ID "
