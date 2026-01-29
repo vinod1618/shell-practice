@@ -10,7 +10,7 @@ if [ $1 -ne 0 ]; then
   echo "$2 installation failed"
   exit 1
 else
-  echo "installation is success"
+  echo "$2 installation is success"
 fi
 }
 
