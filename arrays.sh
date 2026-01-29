@@ -2,4 +2,4 @@
 
 Fruite=("apple" "banna" "orange" "grapes")
 
-echo "Fruits are $Fruiteaaaa"
+echo "Fruits are ${Fruite[@]}"
