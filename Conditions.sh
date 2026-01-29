@@ -1,6 +1,9 @@
 #!/bin/bash
 
 n1=100
-if [$n1 -gt echo "enter an number:" read value]; then
-    echo "yes $n1 is greater"
+echo "enter an number:"
+read value
+
+if [$value -gt $n1]; then
+    echo "yes entered $value is greater than $n1"
 fi
