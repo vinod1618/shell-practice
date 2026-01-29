@@ -6,8 +6,6 @@ echo "$today"
 #another example
 
 Script_started=$(date +%s)
-echo "$today"
-
 sleep  10
 
 Script_end=$(date +%s)
