@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Logs_file ="/var/log/shell-script/firstlog.log"
+Logs_file ="/var/log/shell-script/$0.log"
 
 if [ $(id -u) -ne 0 ]; then
   echo "please run this script with root user access"
