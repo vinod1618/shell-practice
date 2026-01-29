@@ -1,17 +1,15 @@
-#! /bin/bash
+#!/bin/bash
 
-if [ $(id -u) ==0 ]; then
-   echo "please run this script with root user access"
-   exit 1
+if [ "$(id -u)" -ne 0 ]; then
+  echo "please run this script with root user access"
+  exit 1
 fi
 
 dnf install nginx -y
 
-if ( $? == 1 ); then
-
-    echo "Nginx installation is failed"
-    exit 1
-else 
-   
-    echo "installation is success"
- fi
+if [ $? -ne 0 ]; then
+  echo "nginx installation failed"
+  exit 1
+else
+  echo "installation is success"
+fi
