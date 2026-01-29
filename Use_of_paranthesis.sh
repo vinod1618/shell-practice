@@ -1,5 +1,5 @@
 #!/bin/bash
-names= ("vinod" "suresh")
+names=("vinod" "suresh")
 today=$(date)
 echo "$today"
 
