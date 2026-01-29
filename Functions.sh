@@ -1,5 +1,7 @@
 #!/bin/bash
 
+Logs_file ="/var/log/shell-script/firstlog.log
+
 if [ $(id -u) -ne 0 ]; then
   echo "please run this script with root user access"
   exit 1
@@ -15,9 +17,9 @@ fi
 }
 
 
-dnf install nginx -y
-validate $? "nginx"
-dnf install mysql -y
+dnf install nginx -y &>> $Logs_file
+validate $? "nginx" 
+dnf install mysql -y  &>> $Logs_file
 validate $? "mysql"
-dnf install nodejs -y
+dnf install nodejs -y  &>>$Logs_file
 validate $? "nodejs"
