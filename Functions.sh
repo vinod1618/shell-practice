@@ -5,13 +5,6 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
-dnf install nginx -y
-validate $?, "nginx" 
-
-#dnf install mysql -y
-
-#dnf install nodejs -y
-
 validate (){
 if [ $1 -ne 0 ]; then
   echo "$2 installation failed"
@@ -20,3 +13,11 @@ else
   echo "installation is success"
 fi
 }
+
+
+dnf install nginx -y
+validate $?, "nginx"
+
+#dnf install mysql -y
+
+#dnf install nodejs -y
