@@ -13,3 +13,21 @@ if [ $? -ne 0 ]; then
 else
   echo "installation is success"
 fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+   echo "mysql installation failed"
+   exit 1
+else
+   echo "mysql installation is success"
+fi
+
+dnf install noedjs -y
+
+if [ $? -ne 0 ]; then
+   echo "nodejs installation failed"
+   exit 1
+else
+   echo "nodejs installation is success"
+fi
