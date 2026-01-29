@@ -21,5 +21,5 @@ dnf install nginx -y &>> $Logs_file
 validate $? "nginx" 
 dnf install mysql -y  &>> $Logs_file
 validate $? "mysql"
-dnf install nodejs -y  &>>$Logs_file
+dnf install nodejs -y  &>> $Logs_file
 validate $? "nodejs"
