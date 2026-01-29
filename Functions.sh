@@ -6,7 +6,7 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 dnf install nginx -y
-validate ($?, "nginx") 
+validate $?, "nginx" 
 
 #dnf install mysql -y
 
