@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Logs_file ="/var/log/shell-script/firstlog.log
+Logs_file ="/var/log/shell-script/firstlog.log"
 
 if [ $(id -u) -ne 0 ]; then
   echo "please run this script with root user access"
@@ -8,14 +8,15 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 validate (){
+
 if [ $1 -ne 0 ]; then
   echo "$2 installation failed"
   exit 1
 else
   echo "$2 installation is success"
 fi
-}
 
+}
 
 dnf install nginx -y &>> $Logs_file
 validate $? "nginx" 
