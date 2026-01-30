@@ -14,7 +14,7 @@ validate (){
 
 for package_name in $@
 do
-   dnf list installled $package_name &>>$Logs_file
+   rpm -q $package_name &>>$Logs_file
    if [ $? -eq 0 ]; then
      echo "$package_name is already installed" | tee -a $Logs_file
    else 
