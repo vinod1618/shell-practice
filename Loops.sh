@@ -9,6 +9,8 @@ validate (){
       echo "$2 installation is success"
     fi
 
+}
+
 for package_name in $@
 do
    dnf install $package_name -y | tee -a $Logs_file
