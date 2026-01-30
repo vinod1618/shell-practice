@@ -14,5 +14,6 @@ validate (){
 
 for package_name in $@
 do
-   dnf install $package_name -y | tee -a $Logs_file   
+   dnf install $package_name -y | tee -a $Logs_file
+   validate $? "$package_name"
 done
