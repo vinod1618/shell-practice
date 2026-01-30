@@ -14,6 +14,11 @@ validate (){
 
 for package_name in $@
 do
-   dnf install $package_name -y | tee -a $Logs_file
-   validate $? "$package_name"
+   dnf list installled $package_name
+   if [ $? -eq 0 ]; then
+     echo "$package_name is already installed"
+   else 
+     dnf install $package_name -y | tee -a $Logs_file
+     validate $? "$package_name"
+   fi
 done
