@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir /var/log/shell-script/$0.log
+mkdir -p /var/log/shell-script/$0.log
 Logs_file="/var/log/shell-script/$0.log"
 
 validate (){
@@ -14,5 +14,5 @@ validate (){
 
 for package_name in $@
 do
-   dnf install $package_name -y | tee -a $Logs_file
+   dnf install $package_name -y | tee -a $Logs_file   
 done
