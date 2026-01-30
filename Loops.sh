@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir /var/log/shell-script/$0.log
 Logs_file="/var/log/shell-script/$0.log"
 
 validate (){
